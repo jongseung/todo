@@ -5,12 +5,20 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODOS_LS = "todos";
 
 function printToDo(text) {
-  console.log(text);
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  const delBtn = document.createElement("button");
+  delBtn.innerText = "✔";
+  span.innerText = text;
+  li.appendChild(span);
+  li.appendChild(delBtn);
+  toDoList.appendChild(li);
 }
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = toDoInput.value;
   printToDo(currentValue);
+  toDoInput.value = "";
 }
 
 function loadToDos() {
