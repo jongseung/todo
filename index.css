@@ -1,0 +1,12 @@
+.greeting,
+.form {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.clicked {
+    font-size: 50px;
+}
